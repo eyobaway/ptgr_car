@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const sequelize = new Sequelize(
-    process.env.DB_NAME || 'realtor_db',
+    process.env.DB_NAME || 'ptgr-car',
     process.env.DB_USER || 'root',
     process.env.DB_PASSWORD || '',
     {
@@ -28,7 +28,7 @@ const sequelize = new Sequelize(
 export const connectDB = async () => {
     try {
         await sequelize.authenticate();
-        await sequelize.sync(); 
+        await sequelize.sync();
         console.log('Database connection has been established successfully and models synced.');
     } catch (error) {
         console.error('Unable to connect to the database:', error);
