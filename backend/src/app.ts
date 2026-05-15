@@ -27,12 +27,10 @@ app.use(morgan('dev'));
 app.use('/uploads', express.static(path.resolve(process.cwd(), 'uploads')));
 
 // Routes
+app.get('/status', (req, res) => res.json({ status: 'OK', environment: process.env.NODE_ENV }));
+app.get('/api/status', (req, res) => res.json({ status: 'API OK' }));
+
 app.use('/api', routes);
 app.use('/', routes);
-
-// Basic Route
-app.get('/', (req: Request, res: Response) => {
-    res.json({ message: 'Welcome to Realtor Clone API' });
-});
 
 export default app;
