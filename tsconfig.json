@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./frontend"
+    },
+    {
+      "path": "./admin-dashboard"
+    },
+    {
+      "path": "./backend"
+    }
+  ]
+}

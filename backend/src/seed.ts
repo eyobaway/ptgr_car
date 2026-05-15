@@ -23,10 +23,10 @@ const seed = async () => {
 
         // Create Admin User
         const adminPassword = await bcrypt.hash('admin', 10);
-        await getOrCreateUser({ 
-            name: 'System Admin', 
-            email: 'admin@ptgr.com', 
-            password: adminPassword, 
+        await getOrCreateUser({
+            name: 'System Admin',
+            email: 'admin@ptgr.com',
+            password: adminPassword,
             role: UserRole.ADMIN,
             profileImage: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop'
         });
@@ -93,7 +93,7 @@ const seed = async () => {
             {
                 agentId: agent1.id,
                 title: '2024 Tesla Model S Plaid',
-                image: 'https://images.unsplash.com/photo-1617788138017-80ad42243c2d?q=80&w=2070&auto=format&fit=crop',
+                image: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=800&q=80',
                 price: 89900,
                 address: 'Bole High Street',
                 city: 'Addis Ababa',
@@ -111,12 +111,12 @@ const seed = async () => {
                 features: 'Autopilot, Premium Audio, Panoramic Roof, Heated Seats',
                 lat: 9.002,
                 lng: 38.788,
-                images: ['https://images.unsplash.com/photo-1617788138017-80ad42243c2d?q=80&w=2070&auto=format&fit=crop']
+                images: ['https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=800&q=80']
             },
             {
                 agentId: agent2.id,
                 title: '2023 Toyota Land Cruiser 300 VXR',
-                image: 'https://images.unsplash.com/photo-1594568284297-7c64468d67b1?q=80&w=2070&auto=format&fit=crop',
+                image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80',
                 price: 125000,
                 address: 'Old Airport Road',
                 city: 'Addis Ababa',
@@ -134,12 +134,12 @@ const seed = async () => {
                 features: '4WD, Leather Interior, Sunroof, Cool Box',
                 lat: 9.006,
                 lng: 38.732,
-                images: ['https://images.unsplash.com/photo-1594568284297-7c64468d67b1?q=80&w=2070&auto=format&fit=crop']
+                images: ['https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80']
             },
             {
                 agentId: agent1.id,
                 title: '2024 BMW M4 Competition',
-                image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=2070&auto=format&fit=crop',
+                image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80',
                 price: 150,
                 address: 'Kazanchis Business Center',
                 city: 'Addis Ababa',
@@ -158,12 +158,12 @@ const seed = async () => {
                 features: 'Carbon Fiber Package, M-Sport Seats, Head-up Display',
                 lat: 9.021,
                 lng: 38.766,
-                images: ['https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=2070&auto=format&fit=crop']
+                images: ['https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80']
             },
             {
                 agentId: agent4.id,
                 title: '2022 Honda Civic Type R',
-                image: 'https://images.unsplash.com/photo-1606148600133-c7520e588f0c?q=80&w=1974&auto=format&fit=crop',
+                image: 'https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=800&q=80',
                 price: 45000,
                 address: 'Sarbet Residential Zone',
                 city: 'Addis Ababa',
@@ -181,12 +181,12 @@ const seed = async () => {
                 features: 'Brembo Brakes, Sport Mode, Rear Wing, Buckets Seats',
                 lat: 9.015,
                 lng: 38.825,
-                images: ['https://images.unsplash.com/photo-1606148600133-c7520e588f0c?q=80&w=1974&auto=format&fit=crop']
+                images: ['https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=800&q=80']
             },
             {
                 agentId: agent2.id,
                 title: '2023 Mercedes-Benz G63 AMG',
-                image: 'https://images.unsplash.com/photo-1520031441872-265e4ff70366?q=80&w=1926&auto=format&fit=crop',
+                image: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80',
                 price: 245000,
                 address: 'Diplomatic Street',
                 city: 'Addis Ababa',
@@ -204,12 +204,12 @@ const seed = async () => {
                 features: 'Burmester Sound, Night Package, Carbon Interior',
                 lat: 9.030,
                 lng: 38.860,
-                images: ['https://images.unsplash.com/photo-1520031441872-265e4ff70366?q=80&w=1926&auto=format&fit=crop']
+                images: ['https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80']
             },
             {
                 agentId: agent4.id,
                 title: '2024 Ford F-150 Lightning',
-                image: 'https://images.unsplash.com/photo-1669062369522-8051676f4e13?q=80&w=2070&auto=format&fit=crop',
+                image: 'https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=800&q=80',
                 price: 120,
                 address: 'South Africa Street',
                 city: 'Addis Ababa',
@@ -228,7 +228,7 @@ const seed = async () => {
                 features: 'Large Screen, Pro Power Onboard, 4x4',
                 lat: 9.002,
                 lng: 38.745,
-                images: ['https://images.unsplash.com/photo-1669062369522-8051676f4e13?q=80&w=2070&auto=format&fit=crop']
+                images: ['https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=800&q=80']
             }
         ];
 
@@ -236,6 +236,8 @@ const seed = async () => {
             const existing = await Property.findOne({ where: { title: prop.title } });
             if (!existing) {
                 await Property.create(prop as any);
+            } else {
+                await existing.update(prop as any);
             }
         }
 
