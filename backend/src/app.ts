@@ -8,7 +8,7 @@ import path from 'path';
 
 dotenv.config({ path: path.resolve(process.cwd(), '.env') });
 
-import routes from './routes';
+import routes from './routes/router';
 
 const app: Application = express();
 
