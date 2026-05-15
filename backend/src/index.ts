@@ -1,21 +1,30 @@
-import app from './app';
-import { connectDB } from './config/database';
-import { createServer } from 'http';
-import { initSocket } from './socket';
+import { Router } from 'express';
+import authRoutes from './authRoutes';
+import propertyRoutes from './propertyRoutes';
+import agentRoutes from './agentRoutes';
+import articleRoutes from './articleRoutes';
+import uploadRoutes from './uploadRoutes';
+import userRoutes from './userRoutes';
+import messageRoutes from './messageRoutes';
+import aiRoutes from './aiRoutes';
+import adminRoutes from './adminRoutes';
 
-const httpServer = createServer(app);
-initSocket(httpServer);
+const router = Router();
 
-// Connect to Database
-connectDB().catch(err => {
-    console.error('Initial DB connection failed:', err);
+router.use('/auth', authRoutes);
+router.use('/properties', propertyRoutes);
+router.use('/agents', agentRoutes);
+router.use('/news', articleRoutes);
+router.use('/media', uploadRoutes);
+router.use('/users', userRoutes);
+router.use('/messages', messageRoutes);
+router.use('/ai', aiRoutes);
+router.use('/admin', adminRoutes);
+
+router.get('/', (req, res) => {
+    res.json({ status: 'API is running', timestamp: new Date().toISOString() });
 });
 
-if (process.env.NODE_ENV !== 'production') {
-    const PORT = process.env.PORT || 5000;
-    httpServer.listen(PORT, () => {
-        console.log(`Server is running on port ${PORT}`);
-    });
-}
+export default router;
 
-export default app;
+
